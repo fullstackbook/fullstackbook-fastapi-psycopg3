@@ -2,6 +2,11 @@ from functools import lru_cache
 
 from pydantic import BaseSettings
 
+# uncomment to see psycopg.pool logs
+# import logging
+# logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+# logging.getLogger("psycopg.pool").setLevel(logging.INFO)
+
 
 class Settings(BaseSettings):
     db_user: str
